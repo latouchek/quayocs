@@ -233,7 +233,7 @@ quayecosystem1-quay-config-5bf565888c-dtvpv        1/1     Running   0          
 quayecosystem1-quay-postgresql-c7645f945-nzhrr     1/1     Running   0          3h9m
 quayecosystem1-redis-68945f56b7-xk67g              1/1     Running   0          3h10m
 ```
-* We can now ind out the route and access Quay GUI at https://quayecosystem1-quay-local-quay.mycluster.lab.local (login: quay pass: password)
+* We can now find out the route and access Quay GUI at https://quayecosystem1-quay-local-quay.mycluster.lab.local (login: quay pass: password)
 ```bash
 [root@esxi-bastion ~] oc get route
 NAME                         HOST/PORT                                                      PATH   SERVICES                     PORT   TERMINATION            WILDCARD
