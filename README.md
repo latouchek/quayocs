@@ -103,42 +103,42 @@ Get the key here https://access.redhat.com/solutions/3533201
   * Retrieve S3 API credentials and endpoint
     ```bash
     [root@bastion ~] noobaa status -n openshift-storage
-INFO[0000] CLI version: 2.3.0                           
-INFO[0000] noobaa-image: noobaa/noobaa-core:5.5.0       
-INFO[0000] operator-image: noobaa/noobaa-operator:2.3.0
-INFO[0000] Namespace: openshift-storage                 
- .
- .
- .
-#----------------#
-#- S3 Addresses -#
-#----------------#
-ExternalDNS : [https://s3-openshift-storage.mycluster.lab.local]
-ExternalIP  : []
-NodePorts   : [https://10.226.115.10:30795]
-InternalDNS : [https://s3.openshift-storage.svc:443]
-InternalIP  : [https://172.30.20.203:443]
-PodPorts    : [https://10.131.0.90:6443]
-#------------------#
-#- S3 Credentials -#
-#------------------#
-AWS_ACCESS_KEY_ID     : FSfXsNiWnva1lmDnzZ1c
-AWS_SECRET_ACCESS_KEY : r+RpYkH8Es81ZipMjngCmHUfMvIa4TLYOlTJwLgE
-#------------------#
-#- Backing Stores -#
-#------------------#
-NAME                           TYPE            TARGET-BUCKET                             PHASE   AGE         
-noobaa-default-backing-store   s3-compatible   nb.1609358827719.mycluster.lab.local   Ready   94h48m18s   
-#------------------#
-#- Bucket Classes -#
-#------------------#
-NAME                          PLACEMENT                                                             PHASE   AGE         
-noobaa-default-bucket-class   {Tiers:[{Placement: BackingStores:[noobaa-default-backing-store]}]}   Ready   94h48m18s   
-#-----------------#
-#- Bucket Claims -#
-#-----------------#
-No OBCs found.
-```
+    INFO[0000] CLI version: 2.3.0                           
+    INFO[0000] noobaa-image: noobaa/noobaa-core:5.5.0       
+    INFO[0000] operator-image: noobaa/noobaa-operator:2.3.0
+    INFO[0000] Namespace: openshift-storage                 
+     .
+     .
+     .
+    #----------------#
+    #- S3 Addresses -#
+    #----------------#
+    ExternalDNS : [https://s3-openshift-storage.mycluster.lab.local]
+    ExternalIP  : []
+    NodePorts   : [https://10.226.115.10:30795]
+    InternalDNS : [https://s3.openshift-storage.svc:443]
+    InternalIP  : [https://172.30.20.203:443]
+    PodPorts    : [https://10.131.0.90:6443]
+    #------------------#
+    #- S3 Credentials -#
+    #------------------#
+    AWS_ACCESS_KEY_ID     : FSfXsNiWnva1lmDnzZ1c
+    AWS_SECRET_ACCESS_KEY : r+RpYkH8Es81ZipMjngCmHUfMvIa4TLYOlTJwLgE
+    #------------------#
+    #- Backing Stores -#
+    #------------------#
+    NAME                           TYPE            TARGET-BUCKET                             PHASE   AGE         
+    noobaa-default-backing-store   s3-compatible   nb.1609358827719.mycluster.lab.local   Ready   94h48m18s   
+    #------------------#
+    #- Bucket Classes -#
+    #------------------#
+    NAME                          PLACEMENT                                                             PHASE   AGE         
+    noobaa-default-bucket-class   {Tiers:[{Placement: BackingStores:[noobaa-default-backing-store]}]}   Ready   94h48m18s   
+    #-----------------#
+    #- Bucket Claims -#
+    #-----------------#
+    No OBCs found.
+    ```
  Take good notes of ExternalDNS, InternalDNS, AWS_ACCESS_KEY_ID and AWS_ACCESS_KEY_ID as we will need it to create our Quay Echosystem
  * Install s3cmd and create .s3cmd config  (This is not mandatory but makes manipulation of buckets and objects easier)
  ```bash
