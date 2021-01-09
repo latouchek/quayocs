@@ -63,12 +63,12 @@ ocs-storagecluster-cephcluster   /var/lib/rook     3          5h17m   Ready   Cl
     sourceNamespace: openshift-marketplace
   EOF
 
-  ```
 * We wait for the operator to be ready
 ```bash
 [root@bastion ~] oc get pod -n local-quay
 NAME                                                    READY   STATUS    RESTARTS   AGE
 quay-operator-7cb56c7c5f-7dgwk                          1/1     Running   0          6s
+```
 
 * Create an OpenShift secret to be able to pull the required container images
 ```bash
@@ -82,6 +82,7 @@ data:
 type: kubernetes.io/dockerconfigjson
 EOF
 Get the key here https://access.redhat.com/solutions/3533201
+```
 
 
 * RHOCS Object storage service provides an S3 API and is based on NooBaa project.
