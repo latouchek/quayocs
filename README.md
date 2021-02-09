@@ -56,7 +56,7 @@ ocs-storagecluster-cephcluster   /var/lib/rook     3          5h17m   Ready   Cl
     name: quay-operator
     namespace: local-quay
   spec:
-    channel: quay-v3.3
+    channel: quay-v3.4
     installPlanApproval: Automatic
     name: quay-operator
     source: redhat-operators
